@@ -2,6 +2,7 @@ package sv.edu.utec.appsupermercadosprecios;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,6 +32,10 @@ public class ListadoProductosTiendas extends AppCompatActivity {
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
 
+    SearchView searchView;
+
+    ProductosAdapter adapter;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,8 @@ public class ListadoProductosTiendas extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         fab = findViewById(R.id.fab);
+        searchView = findViewById(R.id.search);
+        searchView.clearFocus();
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +67,7 @@ public class ListadoProductosTiendas extends AppCompatActivity {
 
         dataList = new ArrayList<>();
 
-        ProductosAdapter adapter = new ProductosAdapter(ListadoProductosTiendas.this, dataList);
+        adapter = new ProductosAdapter(ListadoProductosTiendas.this, dataList);
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Productos");
@@ -84,5 +91,28 @@ public class ListadoProductosTiendas extends AppCompatActivity {
             }
         });
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchList(newText);
+                return true;
+            }
+        });
+
+    }
+
+    public void searchList(String text){
+        ArrayList<Productos> searchList = new ArrayList<>();
+        for(Productos productos: dataList){
+            if (productos.getNom_producto().toLowerCase().contains(text.toLowerCase())){
+                searchList.add(productos);
+            }
+        }
+        adapter.buscarDataList(searchList);
     }
 }
