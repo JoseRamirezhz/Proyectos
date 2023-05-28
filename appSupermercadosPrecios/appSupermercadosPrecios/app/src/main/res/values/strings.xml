@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="usuario">Correo*</string>
+    <string name="contrasenia">Contraseña*</string>
+    <string name="contrasenia_confirmar">Confirmar Contraseña*</string>
+
+    <string name="page_title_navbar">MENÚ</string>
+    <string name="favorite">fovourite</string>
+    <string name="content_description_favorite"> MENÚ</string>
+    <string name="search">buscar</string>
+    <string name="content_description_search">buscar</string>
+    <string name="more"> moreee</string>
+    <string name="content_description_more"> more</string>
+
+    <string name="mail_validacion"> Ingrese mail valido</string>
+    <string name="password_validacion"> Ingrese un password mayor a 6 caracteres</string>
+    <string name="title_activity_detalle_producto">DetalleProducto</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>

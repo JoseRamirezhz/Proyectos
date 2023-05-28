@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cuadrotextoredondo"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl3"
+        android:layout_width="414dp"
+        android:layout_height="302dp"
+        android:background="#0070C0"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-2dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="294dp"
+            android:layout_height="455dp"
+            android:background="#C1CFCFCF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvInicioSesion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Bienvenido a SPrecios!"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tvInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="Inicia sesion para continuar"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvPassOlvidada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:text="Olvidado su contraseña?"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                android:textStyle=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.148"
+                app:layout_constraintStart_toStartOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedTextField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="280dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/mail_icono"
+                    android:hint="@string/usuario"
+                    app:boxStrokeColor="#2196F3"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="#575555"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:startIconContentDescription="@string/usuario"
+                    app:startIconDrawable="@drawable/mail_icono"
+                    tools:layout_editor_absoluteX="7dp"
+                    tools:ignore="MissingConstraints">
+                    >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cuadrotextoredondo"
+                    android:textCursorDrawable="@drawable/cursor_color_negro"
+                    android:textSize="11sp"/> <!--cambiar color de cursos-->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField0"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="280dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/usuario_icono"
+                android:hint="@string/contrasenia"
+                app:boxStrokeColor="#2196F3"
+                app:endIconMode="password_toggle"
+                app:hintTextColor="#575555"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconContentDescription="@string/contrasenia"
+                app:startIconDrawable="@drawable/contrasenia_icono"
+                tools:layout_editor_absoluteX="7dp">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cuadrotextoredondo"
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@drawable/cursor_color_negro"
+                    android:textSize="11sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvNuevaCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:onClick="irARegistro"
+                android:text="Eres nuevo? Registrate!"
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                android:textStyle=""
+                app:layout_constraintStart_toStartOf="@+id/tvPassOlvidada"
+                app:layout_constraintTop_toBottomOf="@+id/tvPassOlvidada" />
+
+            <Button
+                android:id="@+id/btnIngresar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="168dp"
+                android:onClick="irAMenu"
+                android:text="Ingresar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

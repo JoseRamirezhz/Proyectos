@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="._3_listaSupermercados">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl3"
+        android:layout_width="415dp"
+        android:layout_height="55dp"
+        android:background="#0070C0"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-2dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="MENÚ"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="122dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#136281"
+        android:drawableTop="@drawable/tienda64px"
+        android:onClick="irAPrecios"
+        android:text="Despensa Familiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toEndOf="@+id/btnDolarcity"
+        app:layout_constraintTop_toBottomOf="@+id/cl3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="122dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#5DB53D"
+        android:drawableTop="@drawable/tienda64px"
+        android:onClick="irAPrecios"
+        android:text="Super Selectos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="122dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="280dp"
+        android:backgroundTint="#3FA8D8"
+        android:drawableTop="@drawable/tienda64px"
+        android:onClick="irAPrecios"
+        android:text="Super 99"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnDolarcity"
+        android:layout_width="122dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#F44336"
+        android:drawableTop="@drawable/tienda64px"
+        android:onClick="irAPrecios"
+        android:text="Dolar City"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="87dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="229dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

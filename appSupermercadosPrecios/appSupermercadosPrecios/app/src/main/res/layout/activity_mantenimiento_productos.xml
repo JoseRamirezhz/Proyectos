@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Mantenimiento_Productos">
+
+    <EditText
+        android:id="@+id/edtCodProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Codigo" />
+
+    <EditText
+        android:id="@+id/edtNomProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre"/>
+
+    <EditText
+        android:id="@+id/edtDescProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Descripcion" />
+
+    <EditText
+        android:id="@+id/edtPrecioProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Precio"/>
+
+    <Button
+        android:id="@+id/btnSelecFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Foto" />
+
+    <Button
+        android:id="@+id/btnGaleria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Galeria" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Lista de Productos"/>
+
+    <ListView
+        android:id="@+id/lvProdMto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</LinearLayout>
