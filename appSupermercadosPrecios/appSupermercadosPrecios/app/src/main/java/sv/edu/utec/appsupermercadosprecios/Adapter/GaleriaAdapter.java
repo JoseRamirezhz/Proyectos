@@ -68,6 +68,7 @@ public class GaleriaAdapter extends RecyclerView.Adapter<GaleriaAdapter.FotosVie
         ProgressBar progressBar;
         public FotosViewHolder(@NonNull View itemView) {
             super(itemView);
+
             tv_titulo = itemView.findViewById(R.id.tv_titulo);
             img_fot = itemView.findViewById(R.id.img_foto);
             progressBar = itemView.findViewById(R.id.p_bar_galeria);

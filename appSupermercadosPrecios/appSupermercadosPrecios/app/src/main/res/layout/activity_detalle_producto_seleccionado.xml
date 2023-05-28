@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetalleProductoSeleccionado">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNomProd"
+        android:text="Producto"
+        android:layout_marginTop="14dp"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12sp"
+        android:textColor="@color/lavender"/>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:id="@+id/imgProd"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:src="@drawable/uploadimg2"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CÓDIGO:"
+        android:padding="0dp"
+        android:layout_marginTop="14dp"
+        android:textSize="11sp"
+        android:layout_marginBottom="0sp"
+        android:textColor="@color/lavender"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCodProd"
+        android:text="Codigo"
+        android:padding="4dp"
+        android:layout_marginTop="0dp"
+        android:textSize="10sp"
+        android:layout_marginBottom="0sp"
+        android:textColor="@color/lavender"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOMBRE:"
+        android:padding="0dp"
+        android:layout_marginTop="5dp"
+        android:textSize="11sp"
+        android:layout_marginBottom="0sp"
+        android:textColor="@color/lavender"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNomProdD"
+        android:text="Nombre"
+        android:padding="4dp"
+        android:layout_marginTop="0dp"
+        android:textSize="10sp"
+        android:layout_marginBottom="5sp"
+        android:textColor="@color/lavender"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DESCRIPCIÓN:"
+        android:padding="0dp"
+        android:layout_marginTop="5dp"
+        android:textSize="11sp"
+        android:layout_marginBottom="0sp"
+        android:textColor="@color/lavender"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDescProd"
+        android:text="Descripcion"
+        android:padding="4dp"
+        android:layout_marginTop="0dp"
+        android:textSize="10sp"
+        android:layout_marginBottom="5sp"
+        android:textColor="@color/lavender"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PRECIO:"
+        android:padding="0dp"
+        android:layout_marginTop="5dp"
+        android:textSize="11sp"
+        android:layout_marginBottom="0sp"
+        android:textColor="@color/lavender"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvPrecProd"
+        android:text="Precio"
+        android:padding="4dp"
+        android:layout_marginTop="0dp"
+        android:textSize="10sp"
+        android:layout_marginBottom="0sp"
+        android:textColor="@color/lavender"/>
+
+</LinearLayout>

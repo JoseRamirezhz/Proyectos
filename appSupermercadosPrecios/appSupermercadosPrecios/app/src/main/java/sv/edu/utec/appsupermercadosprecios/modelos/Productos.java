@@ -54,4 +54,8 @@ public class Productos {
     public void setFoto(String foto) {
         this.foto = foto;
     }
+
+    public  Productos(){
+
+    }
 }

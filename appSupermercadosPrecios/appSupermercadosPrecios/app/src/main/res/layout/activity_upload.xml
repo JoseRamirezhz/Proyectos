@@ -34,13 +34,12 @@
                 android:textColor="@color/lavender"/>
 
             <ImageView
+                android:id="@+id/uploadImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/uploadimg2"
-                android:id="@+id/uploadImage"
                 android:layout_marginTop="10dp"
                 android:scaleType="fitXY"
-                />
+                android:src="@drawable/uploadimg2" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -49,6 +48,7 @@
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="10dp"
                 android:padding="16dp"
+                android:textSize="12sp"
                 android:hint="Ingrese Codigo"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"
@@ -61,6 +61,7 @@
                 android:layout_marginTop="5dp"
                 android:padding="16dp"
                 android:hint="Ingrese Nombre"
+                android:textSize="12sp"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"
                 />
@@ -71,6 +72,7 @@
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="5dp"
                 android:padding="16dp"
+                android:textSize="12sp"
                 android:hint="Ingrese Descripcion"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"
@@ -83,6 +85,7 @@
                 android:layout_marginTop="5dp"
                 android:padding="16dp"
                 android:hint="Ingrese Precio"
+                android:textSize="12sp"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"
                 />
