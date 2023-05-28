@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="irAListaSuper"
+    tools:context=".menuPrincipal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl3"
+        android:layout_width="415dp"
+        android:layout_height="55dp"
+        android:background="#0070C0"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-2dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="MENÚ"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnSuper"
+        android:layout_width="172dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="#F44336"
+        android:drawableTop="@drawable/market128px"
+        android:onClick="irAListaSuper"
+        android:text="Supermercados"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl3"
+        app:layout_constraintVertical_bias="0.196" />
+
+    <Button
+        android:id="@+id/btnConfig"
+        android:layout_width="161dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#2196F3"
+        android:drawableTop="@drawable/engrane128px"
+        android:onClick="irARegistro"
+        android:text="Configuración"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toEndOf="@+id/btnSuper"
+        app:layout_constraintTop_toBottomOf="@+id/cl3"
+        app:layout_constraintVertical_bias="0.197" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

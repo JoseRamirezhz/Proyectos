@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "937937728864",
+    "project_id": "appsupermercadosprecios",
+    "storage_bucket": "appsupermercadosprecios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937937728864:android:d1ea817c17b5ffea39da05",
+        "android_client_info": {
+          "package_name": "sv.edu.utec.appsupermercadosprecios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937937728864-ad3avmr82i0q27qvmifth8hptcpl6bok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB76tGysJrHaHyYUK8yDjYN33JNYrTPqNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937937728864-ad3avmr82i0q27qvmifth8hptcpl6bok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
