@@ -2,6 +2,7 @@ package sv.edu.utec.appsupermercadosprecios;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,12 +29,16 @@ import sv.edu.utec.appsupermercadosprecios.modelos.Productos;
 public class MantenimientosProductos extends AppCompatActivity {
 
     FloatingActionButton fab;
+
+
     RecyclerView recyclerView;
     List<Productos> dataList;
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
 
+    SearchView searchView;
 
+    ProductosAdapter adapter;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -43,6 +48,9 @@ public class MantenimientosProductos extends AppCompatActivity {
 
         fab = findViewById(R.id.fab);
 
+        recyclerView = findViewById(R.id.recyclerView);
+        searchView = findViewById(R.id.search);
+        searchView.clearFocus();
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -52,5 +60,64 @@ public class MantenimientosProductos extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(MantenimientosProductos.this,1);
+        recyclerView.setLayoutManager(gridLayoutManager);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(MantenimientosProductos.this);
+        builder.setCancelable(false);
+        builder.setView(R.layout.propress_layout);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        dataList = new ArrayList<>();
+
+        adapter = new ProductosAdapter(MantenimientosProductos.this, dataList);
+        recyclerView.setAdapter(adapter);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Productos");
+        dialog.show();;
+
+        eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                dataList.clear();
+                for(DataSnapshot itemSnapshot: snapshot.getChildren()){
+                    Productos dataProd = itemSnapshot.getValue(Productos.class);
+                    dataList.add(dataProd);
+                }
+                adapter.notifyDataSetChanged();
+                dialog.dismiss();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                dialog.dismiss();
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchList(newText);
+                return true;
+            }
+        });
+
+    }
+
+    public void searchList(String text){
+        ArrayList<Productos> searchList = new ArrayList<>();
+        for(Productos productos: dataList){
+            if (productos.getNom_producto().toLowerCase().contains(text.toLowerCase())){
+                searchList.add(productos);
+            }
+        }
+        adapter.buscarDataList(searchList);
     }
 }

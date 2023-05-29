@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">PreciosApp</string>
     <string name="usuario">Correo*</string>
     <string name="contrasenia">Contraseña*</string>
     <string name="contrasenia_confirmar">Confirmar Contraseña*</string>

@@ -33,16 +33,4 @@ tools:context=".ListadoProductosTiendas">
         android:layout_marginTop="10dp"
         android:layout_below="@id/search"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fab"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:maxLines="0"
-        android:layout_margin="40dp"
-        android:src="@drawable/add_icono"
-        android:backgroundTint="@color/lavender"
-        android:tint="@color/white"
-        />
 </RelativeLayout>

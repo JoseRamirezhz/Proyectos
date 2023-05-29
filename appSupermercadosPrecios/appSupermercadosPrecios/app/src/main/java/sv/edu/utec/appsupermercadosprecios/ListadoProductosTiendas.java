@@ -26,7 +26,7 @@ import sv.edu.utec.appsupermercadosprecios.Adapter.ProductosAdapter;
 import sv.edu.utec.appsupermercadosprecios.modelos.Productos;
 
 public class ListadoProductosTiendas extends AppCompatActivity {
-    FloatingActionButton fab;
+    //FloatingActionButton fab;
     RecyclerView recyclerView;
     List<Productos> dataList;
     DatabaseReference databaseReference;
@@ -43,17 +43,18 @@ public class ListadoProductosTiendas extends AppCompatActivity {
         setContentView(R.layout.activity_listado_productos_tiendas);
 
         recyclerView = findViewById(R.id.recyclerView);
-        fab = findViewById(R.id.fab);
+       // fab = findViewById(R.id.fab);
         searchView = findViewById(R.id.search);
         searchView.clearFocus();
 
+        /*
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ListadoProductosTiendas.this,UploadActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(ListadoProductosTiendas.this,1);
