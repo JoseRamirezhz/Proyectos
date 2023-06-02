@@ -7,6 +7,16 @@ public class Productos {
     private String precio;
     private String foto;
 
+    private String key;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
     public Productos(String cod_producto, String nom_producto, String desc_producto, String precio, String foto) {
         this.cod_producto = cod_producto;
         this.nom_producto = nom_producto;

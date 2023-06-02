@@ -11,4 +11,5 @@
     <color name="colorPrimaryDark">#272b45</color>
     <color name="colorAccent">#3b3e4b</color>
     <color name="lavender">#8692f7</color>
+    <string name="col_red">#c70000</string>
 </resources>

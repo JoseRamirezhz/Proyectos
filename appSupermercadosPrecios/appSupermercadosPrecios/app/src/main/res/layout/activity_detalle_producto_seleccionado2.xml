@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetalleProductoSeleccionado">
+    tools:context=".DetalleProductoSeleccionado2">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvNomProd"
+        android:id="@+id/tvNomProd2"
         android:text="Producto"
         android:layout_marginTop="14dp"
         android:textSize="20sp"
@@ -22,7 +22,7 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:id="@+id/imgProd"
+        android:id="@+id/imgProd2"
         android:padding="8dp"
         android:layout_gravity="center"
         android:src="@drawable/uploadimg2"
@@ -41,7 +41,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvCodProd"
+        android:id="@+id/tvCodProd2"
         android:text="Codigo"
         android:padding="4dp"
         android:layout_marginTop="0dp"
@@ -62,7 +62,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvNomProdD"
+        android:id="@+id/tvNomProdD2"
         android:text="Nombre"
         android:padding="4dp"
         android:layout_marginTop="0dp"
@@ -84,7 +84,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvDescProd"
+        android:id="@+id/tvDescProd2"
         android:text="Descripcion"
         android:padding="4dp"
         android:layout_marginTop="0dp"
@@ -95,7 +95,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="PRECIO:"
+        android:text="PRECIO2:"
         android:padding="0dp"
         android:layout_marginTop="5dp"
         android:textSize="11sp"
@@ -105,13 +105,44 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvPrecProd"
+        android:id="@+id/tvPrecProd2"
         android:text="Precio"
         android:padding="4dp"
         android:layout_marginTop="0dp"
         android:textSize="10sp"
         android:layout_marginBottom="0sp"
         android:textColor="@color/lavender"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            app:menu_fab_size="normal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            app:menu_colorPressed="@color/lavender"
+            app:menu_colorNormal="@color/lavender"
+            app:menu_icon="@drawable/formas_list"
+            app:menu_openDirection="up"
+            app:menu_showShadow="true">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deleteButton2"
+                android:src="@drawable/elimar_icono"
+                app:fab_showShadow="true"
+                app:fab_colorNormal="#D51E10"
+                app:fab_size="mini"/>
+
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </RelativeLayout>
 
 
 </LinearLayout>

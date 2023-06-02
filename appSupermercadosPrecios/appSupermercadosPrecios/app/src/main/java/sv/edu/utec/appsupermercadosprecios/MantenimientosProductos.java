@@ -22,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import sv.edu.utec.appsupermercadosprecios.Adapter.ListProductosAdapter;
 import sv.edu.utec.appsupermercadosprecios.Adapter.ProductosAdapter;
 import sv.edu.utec.appsupermercadosprecios.modelos.Producto;
 import sv.edu.utec.appsupermercadosprecios.modelos.Productos;
@@ -38,7 +39,7 @@ public class MantenimientosProductos extends AppCompatActivity {
 
     SearchView searchView;
 
-    ProductosAdapter adapter;
+    ListProductosAdapter adapter;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -72,7 +73,7 @@ public class MantenimientosProductos extends AppCompatActivity {
 
         dataList = new ArrayList<>();
 
-        adapter = new ProductosAdapter(MantenimientosProductos.this, dataList);
+        adapter = new ListProductosAdapter(MantenimientosProductos.this, dataList);
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Productos");
@@ -84,6 +85,7 @@ public class MantenimientosProductos extends AppCompatActivity {
                 dataList.clear();
                 for(DataSnapshot itemSnapshot: snapshot.getChildren()){
                     Productos dataProd = itemSnapshot.getValue(Productos.class);
+                    //dataProd.setKey(itemSnapshot.getKey());
                     dataList.add(dataProd);
                 }
                 adapter.notifyDataSetChanged();
@@ -118,6 +120,6 @@ public class MantenimientosProductos extends AppCompatActivity {
                 searchList.add(productos);
             }
         }
-        adapter.buscarDataList(searchList);
+        adapter.buscarDataList2(searchList);
     }
 }
